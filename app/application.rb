@@ -24,6 +24,7 @@ class Application
         resp.write "Your cart is empty"
       end
     elsif req.path.match(/add/)
+      binding.pry
       if req.params["q"] != nil
         @@cart << req.params["q"]
         resp.write "added #{req.params['q']}"
