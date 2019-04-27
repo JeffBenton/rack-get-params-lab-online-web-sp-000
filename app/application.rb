@@ -27,7 +27,7 @@ class Application
       if req.params["item"] != nil
         @@cart << req.params["item"]
         resp.write "added #{req.params['item']}"
-      elsif
+      else
         resp.write "We don't have that item"
       end
     else
