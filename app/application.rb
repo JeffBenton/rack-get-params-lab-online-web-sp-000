@@ -19,6 +19,9 @@ class Application
         @@cart.each do |item|
           resp.write "#{item}\n"
         end
+      elsif
+        resp.write "Your cart is empty"
+      end
     elsif req.path.match(/add/)
       if req.params["q"].exist?
         @@cart << req.params["q"]
