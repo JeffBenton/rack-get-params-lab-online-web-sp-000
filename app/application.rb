@@ -25,7 +25,7 @@ class Application
       end
     elsif req.path.match(/add/)
       binding.pry
-      if req.params["item"]
+      if req.params["item"] && req.params["item"]
         @@cart << req.params["item"]
         resp.write "added #{req.params['item']}"
       else
