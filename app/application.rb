@@ -26,8 +26,8 @@ class Application
     elsif req.path.match(/add/)
       binding.pry
       if req.params["item"] != nil
-        @@cart << req.params["q"]
-        resp.write "added #{req.params['q']}"
+        @@cart << req.params["item"]
+        resp.write "added #{req.params['item']}"
       elsif
         resp.write "We don't have that item"
       end
