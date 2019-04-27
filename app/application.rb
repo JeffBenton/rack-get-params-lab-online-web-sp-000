@@ -1,3 +1,4 @@
+require 'pry'
 class Application
 
   @@items = ["Apples","Carrots","Pears"]
@@ -24,6 +25,7 @@ class Application
       end
     elsif req.path.match(/add/)
       item = req.params["q"]
+      binding.pry
       puts item
       if req.params["q"]
         @@cart << req.params["q"]
