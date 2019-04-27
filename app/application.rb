@@ -19,7 +19,9 @@ class Application
         resp.write "#{item}\n"
       end
     elsif req.path.match(/add/)
-      req.params["q"].exist? ? @@cart << req.params["q"] : re
+      if req.params["q"].exist?
+        @@cart << req.params["q"]
+        resp.write ""
     else
       resp.write "Path Not Found"
     end
