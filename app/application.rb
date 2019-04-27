@@ -24,6 +24,7 @@ class Application
         resp.write "added #{req.params["q"}"
       elsif
         resp.write "We don't have that item"
+      end
     else
       resp.write "Path Not Found"
     end
