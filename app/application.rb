@@ -21,7 +21,7 @@ class Application
     elsif req.path.match(/add/)
       if req.params["q"].exist?
         @@cart << req.params["q"]
-        resp.write "added #{req.params["q"}"
+        resp.write "added #{req.params['q']}"
       elsif
         resp.write "We don't have that item"
       end
